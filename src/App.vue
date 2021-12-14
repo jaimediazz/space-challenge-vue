@@ -1,5 +1,7 @@
 <template>
-  <router-view></router-view>
+  <div class="bg-image" style="background-image: url('./assets/home/background-home-desktop.jpg'); height: 100vh;">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>

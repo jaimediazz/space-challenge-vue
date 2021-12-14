@@ -1,5 +1,8 @@
 <template>
-    <app-header></app-header>
+    <div class="container d-flex flex-column">
+        <app-header></app-header>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
