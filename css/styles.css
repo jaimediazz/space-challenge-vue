@@ -1,0 +1,109 @@
+.text-format {
+    color: #fff;
+    font-family: Bellefair;
+}
+
+h1 {
+    font-family: Bellefair;
+    font-size: 150px;
+}
+
+h2 {
+    font-family: Bellefair;
+    font-size: 100px;
+}
+
+h3 {
+    font-family: Bellefair;
+    font-size: 56px;
+}
+
+h4 {
+    font-family: Bellefair;
+    font-size: 32px;
+}
+
+h5 {
+    font-family: Barlow;
+    font-size: 28px;
+    letter-spacing: 4.75px;
+}
+
+#nav-bar > * {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+li a {
+    text-decoration: none;
+    color: #fff;    
+}
+
+li:hover {
+    border-bottom: solid 5px;
+    border-color: #D0D6F9;
+    color: #fff;
+}
+
+li a:hover {
+    color: #fff;
+}
+
+.active {
+    border-bottom: solid 5px;
+    border-bottom-color: #fff;
+}
+
+h4 a {
+    text-decoration: none;
+    color: #000;    
+}
+
+h4 a:hover {
+    color: #000;
+}
+
+.float-container {
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+} 
+
+.hijo {
+    float: left;
+}
+
+div a {
+    text-decoration: none;
+    color: #fff;
+}
+
+div h4 a {
+    color: #000;    
+}
+
+.dimensiones {
+    width: 75px;
+    height: 75px;
+}
+
+.dimensiones-crew {
+    width: 15px;
+    height: 15px;
+}
+
+.active-circular {
+    background-color: #fff;
+}
+
+.active-circular a {
+    color: #000;
+}
+
+.non-active {
+    background-color: #D0D6F9;
+}
