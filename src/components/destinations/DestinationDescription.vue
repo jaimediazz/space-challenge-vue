@@ -1,18 +1,16 @@
 <template>
     <div class="text-format">
-        <h2 class="mt-3">MOON</h2>
-        <p class="mb-5">  See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-            regain perspective and come back refreshed. While you’re there, take in some history 
-            by visiting the Luna 2 and Apollo 11 landing sites.</p>
+        <h2 class="mt-3"> {{ name }} </h2>
+        <p class="mb-5">  {{ description }} </p>
         <hr>
         <div class="float-container">
             <div class="float-child">
                 <p>AVG. DISTANCE</p>
-                <h4>384,400 KM</h4>
+                <h4> {{ distance }} </h4>
             </div>
             <div class="float-child">
                 <p>EST. TRAVEL TIME</p>
-                <h4>3 DAYS</h4>
+                <h4> {{ travelTime }} </h4>
             </div>            
         </div>
     </div>
@@ -20,7 +18,7 @@
 
 <script>
 export default {
-
+    props: ['name','description','distance','travelTime']
 }
 </script>
 
