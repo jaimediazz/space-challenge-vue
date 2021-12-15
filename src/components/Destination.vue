@@ -18,6 +18,11 @@ import DestinationImage from './destinations/DestinationImage.vue';
 import DestinationDescription from './destinations/DestinationDescription.vue';
 
 export default {
+    data() {
+        return {
+            destinationImages: ['']
+        }
+    },
     components: {
         appHeader: Header,
         appDestinationImage: DestinationImage,

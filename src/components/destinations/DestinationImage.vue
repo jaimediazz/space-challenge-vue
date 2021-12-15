@@ -9,11 +9,12 @@
 
 <script>
 export default {
-    data() {
+    props: ['destinationImages']
+/*     data() {
         return {
             moonImageRoute: '../../assets/destination/image-moon.png' 
         }
-    }
+    } */
 }
 </script>
 
