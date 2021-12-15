@@ -10,7 +10,7 @@
             <router-link to="/"> 00 Home </router-link>
           </li>
           <li class="nav-item"> 
-            <router-link to="/destination/moon"> 01 Destination </router-link> 
+            <router-link to="/destination"> 01 Destination </router-link> 
           </li>
           <li class="nav-item"> 
             <a href="./crew-members/crew-commander.html"> 02 Crew </a>  
