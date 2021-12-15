@@ -2,7 +2,7 @@
     <div class="container d-flex flex-column">
         <app-header></app-header>
         <div class="row my-5 d-flex align-items-center">
-            <app-destination-image></app-destination-image>
+            <app-destination-image :destinationImage="destinationImages[0]" :altImage="altImages[0]"></app-destination-image>
             <div class="col d-flex flex-column">
                 <app-destination-header></app-destination-header>
                 <app-destination-description></app-destination-description>
@@ -20,7 +20,8 @@ import DestinationDescription from './destinations/DestinationDescription.vue';
 export default {
     data() {
         return {
-            destinationImages: ['']
+            destinationImages: ['../assets/destination/image-moon.png'],
+            altImages: ['Moon']
         }
     },
     components: {
