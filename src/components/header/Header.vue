@@ -12,8 +12,8 @@
           <li class="nav-item"> 
             <router-link to="/destination"> 01 Destination </router-link> 
           </li>
-          <li class="nav-item"> 
-            <a href="./crew-members/crew-commander.html"> 02 Crew </a>  
+          <li class="nav-item">
+            <router-link to="/crewMember"> 02 Crew </router-link> 
           </li>
           <li class="nav-item"> 
             <a href="./technologies/technology-vehicle.html"> 03 Technology </a>  
