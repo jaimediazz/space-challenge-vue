@@ -5,7 +5,7 @@
         <h5 class="mt-5" style="color: #D0D6F9;"> {{ title }} </h5>
         <h4 class="mb-4"> {{ name }} </h4>
         <p class="mb-5"> {{ description }} </p>
-          <app-crew-member-header></app-crew-member-header>
+        <app-crew-member-header></app-crew-member-header>
       </div>
     </div>      
 </template>

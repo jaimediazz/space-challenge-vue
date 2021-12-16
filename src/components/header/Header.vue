@@ -15,8 +15,8 @@
           <li class="nav-item">
             <router-link to="/crewMember"> 02 Crew </router-link> 
           </li>
-          <li class="nav-item"> 
-            <a href="./technologies/technology-vehicle.html"> 03 Technology </a>  
+          <li class="nav-item">
+            <router-link to="/technology"> 03 Technology </router-link> 
           </li>
         </ul>
       </div>
@@ -27,7 +27,7 @@
 export default {
     data() {
         return {
-            logo: '../../assets/shared/logo.svg'
+          logo: '../../assets/shared/logo.svg'
         }
     }
 }
