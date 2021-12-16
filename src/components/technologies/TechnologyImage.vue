@@ -1,16 +1,12 @@
 <template>
     <div class="col-6">
-      <img :src="img" alt="Vehicle portrait">
+      <img :src="imgRoute" :alt="altImg">
     </div>    
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            img: '../../assets/technology/image-launch-vehicle-portrait.jpg' 
-        }
-    }    
+    props: ['imgRoute','altImg']    
 }
 </script>
 
