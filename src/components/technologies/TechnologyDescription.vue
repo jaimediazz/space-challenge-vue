@@ -4,7 +4,7 @@
         <div class="col-12">
           <h5 class="mb-5" style="color: #fff;"> <p style="display: inline; color: #D0D6F9;">03</p> SPACE LAUNCH 101</h5>
         </div>
-        <app-tecnology-header></app-tecnology-header>
+        <app-technology-header></app-technology-header>
         <div class="col-9 text-format">
           <h5 style="color: #D0D6F9; font-size: 18px;">THE TERMINOLOGY...</h5>
           <h4 class="mb-5">LAUNCH VEHICLE</h4>
