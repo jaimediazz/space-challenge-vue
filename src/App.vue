@@ -5,22 +5,16 @@
 </template>
 
 <script>
-import { eventBus } from './main';
 import Home from './components/Home.vue';
 
 export default {
-  data() {
-    return {
-      backgroundImg: '../assets/home/background-home-desktop.jpg'
-    }
-  },
   components: {
     appHome: Home
   },
-  created() {
-    eventBus.$on('tabWasChanged', (backgroundImg) => {
-      this.backgroundImg = backgroundImg;   
-    })
+  computed: {
+    backgroundImg() {
+      return this.$store.state.backgroundImg;
+    }    
   }
 }
 </script>

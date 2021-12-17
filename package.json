@@ -13,7 +13,8 @@
     "http-server": "^14.0.0",
     "vue": "^2.5.11",
     "vue-router": "^3.5.3",
-    "vuex": "^3.6.2"
+    "vuex": "^3.6.2",
+    "vuex-persistedstate": "^4.1.0"
   },
   "browserslist": [
     "> 1%",
