@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-image" :style="{ backgroundImage: 'url(' + backgroundImg + ')', height: '100vh'}">
+  <div id="background" class="bg-image" :style="{ backgroundImage: 'url(' + backgroundImg + ')', height: '100vh'}">
     <router-view></router-view>
   </div>
 </template>
