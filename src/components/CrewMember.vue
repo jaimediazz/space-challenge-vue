@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { eventBus } from '../main';
 import Header from './header/Header.vue';
 import CrewMemberImage from './crewMembers/CrewMemberImage.vue';
 import CrewMemberDescription from './crewMembers/CrewMemberDescription.vue';
@@ -21,7 +20,6 @@ import CrewMemberDescription from './crewMembers/CrewMemberDescription.vue';
 export default {
     data() {
         return {
-            selectedMember: 0,
             titles: ['COMMANDER','SPECIALIST','PILOT','ENGINEER'],
             names: ['DOUGLAS HURLEY','MARK SHUTTLEWORTH','VICTOR GLOVER','ANOUSHEH ANSARI'],
             imgRoutes: [
@@ -43,11 +41,11 @@ export default {
         appCrewMemberImage: CrewMemberImage,
         appCrewMemberDescription: CrewMemberDescription
     },
-    created() {
-        eventBus.$on('memberWasChanged', (selectedMember) => {
-            this.selectedMember = selectedMember;
-        })
-    } 
+    computed: {
+        selectedMember() {
+            return this.$store.state.selectedMember;
+        }        
+    }
 }
 </script>
 

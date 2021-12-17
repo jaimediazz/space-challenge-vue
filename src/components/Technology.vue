@@ -15,7 +15,6 @@
 </template>
 
 <script>
-import { eventBus } from '../main';
 import Header from './header/Header.vue';
 import TechnologyImage from './technologies/TechnologyImage.vue';
 import TechnologyDescription from './technologies/TechnologyDescription.vue';
@@ -23,7 +22,6 @@ import TechnologyDescription from './technologies/TechnologyDescription.vue';
 export default {
     data() {
         return {
-            selectedTechnology: 0,
             names: ['LAUNCH VEHICLE', 'SPACEPORT', 'SPACE CAPSULE'],
             descriptions: [
                 "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
@@ -42,10 +40,10 @@ export default {
         appTechnologyImage: TechnologyImage,
         appTechnologyDescription: TechnologyDescription
     },
-    created() {
-        eventBus.$on('technologyWasChanged', (selectedTechnology) => {
-            this.selectedTechnology = selectedTechnology;
-        })
+    computed: {
+        selectedTechnology() {
+            return this.$store.state.selectedTechnology;
+        }        
     }    
 }
 </script>

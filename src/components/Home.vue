@@ -29,11 +29,6 @@
 import Header from './header/Header.vue';
 
 export default {
-/*     data() {
-        return {
-            : 
-        }
-    }, */
     components: {
         appHeader: Header
     }

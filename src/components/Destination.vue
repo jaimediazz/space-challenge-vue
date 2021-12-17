@@ -20,7 +20,6 @@
 </template>
 
 <script>
-import { eventBus } from '../main';
 import Header from './header/Header.vue';
 import DestinationHeader from './header/destinationHeader.vue';
 import DestinationImage from './destinations/DestinationImage.vue';
@@ -29,7 +28,6 @@ import DestinationDescription from './destinations/DestinationDescription.vue';
 export default {
     data() {
         return {
-            selectedDestination: 0,
             destinationImages: [
                 '../assets/destination/image-moon.png',
                 '../assets/destination/image-mars.png',
@@ -53,10 +51,10 @@ export default {
         appDestinationHeader: DestinationHeader,
         appDestinationDescription: DestinationDescription
     },
-    created() {
-        eventBus.$on('destinationWasChanged', (selectedDestination) => {
-            this.selectedDestination = selectedDestination;
-        })
+    computed: {
+        selectedDestination() {
+            return this.$store.state.selectedDestination;
+        }
     }
 }
 </script>

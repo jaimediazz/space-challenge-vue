@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import { eventBus } from '../../main';
-
 export default {
   data() {
     return {
@@ -26,21 +24,7 @@ export default {
   },
   methods: {
     changeSelectedDestination(planet) {
-      switch(planet) {
-        case 'moon':
-          this.selectedDestination = 0;
-          break;
-        case 'mars':
-          this.selectedDestination = 1;
-          break;
-        case 'europa':
-          this.selectedDestination = 2;
-          break;
-        case 'titan':
-          this.selectedDestination = 3;
-          break;
-      }
-      eventBus.$emit('destinationWasChanged', this.selectedDestination);
+      this.$store.dispatch('changeSelectedDestination',planet);
     }    
   }
 }

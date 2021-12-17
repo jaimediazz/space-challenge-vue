@@ -24,32 +24,15 @@
 </template>
 
 <script>
-import { eventBus } from '../../main';
-
 export default {
     data() {
         return {
           logo: '../../assets/shared/logo.svg',
-          backgroundImageRoute: 'home'
         }
     },
     methods: {
       changeSelectedTab(tab) {
-        switch(tab) {
-          case 'home':
-            this.backgroundImageRoute ='../assets/home/background-home-desktop.jpg';
-            break;
-          case 'destination':
-            this.backgroundImageRoute ='../assets/destination/background-destination-desktop.jpg';
-            break;
-          case 'crew':
-            this.backgroundImageRoute ='../assets/crew/background-crew-desktop.jpg';
-            break;
-          case 'technology':
-            this.backgroundImageRoute ='../assets/technology/background-technology-desktop.jpg';
-            break;                                                
-        }
-        eventBus.$emit('tabWasChanged', this.backgroundImageRoute);
+        this.$store.dispatch('changeSelectedTab',tab);
       }
     }
 }

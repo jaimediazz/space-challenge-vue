@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import { eventBus } from '../../main';
-
 export default {
   data() {
     return {
@@ -26,18 +24,7 @@ export default {
   },
   methods: {
     changeSelectedTechnology(technology) {
-      switch(technology) {
-          case 'vehicle':
-              this.selectedTechnology = 0;
-              break;
-          case 'spaceport':
-              this.selectedTechnology = 1;
-              break;
-          case 'capsule':
-              this.selectedTechnology = 2;
-              break;
-      }
-      eventBus.$emit('technologyWasChanged', this.selectedTechnology);
+      return this.$store.dispatch('changeSelectedTechnology',technology);
     }
   }    
 }
