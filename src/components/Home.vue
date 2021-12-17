@@ -14,15 +14,8 @@
         </div>
       </div>
       <!-- EXPLORE BUTTON -->
-<!--       <div class="col d-flex justify-content-end">
-        <div class="card border border-1 rounded-circle">
-          <div class="card-img-overlay d-flex justify-content-center align-items-center">
-            <h4> <a href="./destinations/destination-moon.html"> EXPLORE </a> </h4>
-          </div>
-        </div>
-      </div> -->
       <div class="col d-flex justify-content-end">
-        <router-link to="/destination">
+        <router-link to="/destination"  @click.native="changeSelectedTab('destination')">
           <div 
             class="d-flex justify-content-center align-items-center rounded-circle bg-light align-middle" 
             style="width: 250px; height: 250px; color: #000; font-family: Bellefair; font-size: 28px;">EXPLORE</div>
@@ -36,9 +29,14 @@
 import Header from './header/Header.vue';
 
 export default {
-    components: {
-      appHeader: Header
+  components: {
+    appHeader: Header
+  },
+  methods: {
+    changeSelectedTab(tab) {
+      this.$store.dispatch('changeSelectedTab',tab);
     }
+  }  
 }
 </script>
 
