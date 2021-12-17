@@ -14,7 +14,8 @@ export const store = new VueX.Store({
             '../assets/destination/image-titan.png'            
         ],
         selectedDestination: 0,
-        selectedMember: 0
+        selectedMember: 0,
+        selectedTechnology: 0
     },
     mutations: {
         changeSelectedTab: (state,payload) => {
@@ -64,7 +65,20 @@ export const store = new VueX.Store({
                     state.selectedMember = 3;
                     break;
             }            
-        }
+        },
+        changeSelectedTechnology: (state,payload) => {
+            switch(payload) {
+                case 'vehicle':
+                    state.selectedTechnology = 0;
+                    break;
+                case 'spaceport':
+                    state.selectedTechnology = 1;
+                    break;
+                case 'capsule':
+                    state.selectedTechnology = 2;
+                    break;
+            }
+        }        
     },
     actions: {
         changeSelectedTab: (context,payload) => {
@@ -75,7 +89,10 @@ export const store = new VueX.Store({
         },
         changeSelectedMember: (context,payload) => {
             context.commit('changeSelectedMember',payload);
-        }
+        },
+        changeSelectedTechnology: (context,payload) => {
+            context.commit('changeSelectedTechnology',payload);
+        } 
     },
     plugins: [createPersistedState()]
 });
