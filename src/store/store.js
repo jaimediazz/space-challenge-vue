@@ -6,21 +6,14 @@ Vue.use(VueX);
 
 export const store = new VueX.Store({
     state: {
-        backgroundImg: '../assets/home/background-home-desktop.jpg'
-    },
-    getters: {
-        changeSelectedTab: (state) => (tab) => {
-            switch(tab) {
-                case 'home':
-                  return state.backgroundImg ='../assets/home/background-home-desktop.jpg';
-                case 'destination':
-                  return state.backgroundImg ='../assets/destination/background-destination-desktop.jpg';
-                case 'crew':
-                  return state.backgroundImg ='../assets/crew/background-crew-desktop.jpg';
-                case 'technology':
-                  return state.backgroundImg ='../assets/technology/background-technology-desktop.jpg';
-            }            
-        }
+        backgroundImg: '../assets/home/background-home-desktop.jpg',
+        destinationImages: [
+            '../assets/destination/image-moon.png',
+            '../assets/destination/image-mars.png',
+            '../assets/destination/image-europa.png',
+            '../assets/destination/image-titan.png'            
+        ],
+        selectedDestination: 0
     },
     mutations: {
         changeSelectedTab: (state,payload) => {
@@ -38,11 +31,30 @@ export const store = new VueX.Store({
                   state.backgroundImg ='../assets/technology/background-technology-desktop.jpg';
                   break;
             }            
+        },
+        changeSelectedDestination: (state,payload) => {
+            switch (payload) {
+                case 'moon':
+                    state.selectedDestination = 0;                    
+                    break;
+                case 'mars':
+                    state.selectedDestination = 1;
+                    break;
+                case 'europa':
+                    state.selectedDestination = 2;
+                    break;
+                case 'titan':
+                    state.selectedDestination = 3;
+                    break;
+            }
         }
     },
     actions: {
         changeSelectedTab: (context,payload) => {
             context.commit('changeSelectedTab',payload);
+        },
+        changeSelectedDestination: (context,payload) => {
+            context.commit('changeSelectedDestination',payload);
         }
     },
     plugins: [createPersistedState()]
