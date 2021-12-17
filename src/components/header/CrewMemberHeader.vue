@@ -16,8 +16,6 @@
 </template>
 
 <script>
-import { eventBus } from '../../main';
-
 export default {
   data() {
     return {
@@ -26,21 +24,7 @@ export default {
   },
   methods: {
     changeSelectedMember(member) {
-      switch(member) {
-        case 'commander':
-          this.selectedMember = 0;
-          break;
-        case 'specialist':
-          this.selectedMember = 1;
-          break;
-        case 'pilot':
-          this.selectedMember = 2;
-          break;
-        case 'engineer':
-          this.selectedMember = 3;
-          break;
-      }
-      eventBus.$emit('memberWasChanged', this.selectedMember);
+      this.$store.dispatch('changeSelectedMember',member);
     }        
   }    
 }

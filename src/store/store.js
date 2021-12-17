@@ -13,7 +13,8 @@ export const store = new VueX.Store({
             '../assets/destination/image-europa.png',
             '../assets/destination/image-titan.png'            
         ],
-        selectedDestination: 0
+        selectedDestination: 0,
+        selectedMember: 0
     },
     mutations: {
         changeSelectedTab: (state,payload) => {
@@ -47,6 +48,22 @@ export const store = new VueX.Store({
                     state.selectedDestination = 3;
                     break;
             }
+        },
+        changeSelectedMember: (state,payload) => {
+            switch (payload) {
+                case 'commander':
+                    state.selectedMember = 0;                    
+                    break;
+                case 'specialist':
+                    state.selectedMember = 1;
+                    break;
+                case 'pilot':
+                    state.selectedMember = 2;
+                    break;
+                case 'engineer':
+                    state.selectedMember = 3;
+                    break;
+            }            
         }
     },
     actions: {
@@ -55,6 +72,9 @@ export const store = new VueX.Store({
         },
         changeSelectedDestination: (context,payload) => {
             context.commit('changeSelectedDestination',payload);
+        },
+        changeSelectedMember: (context,payload) => {
+            context.commit('changeSelectedMember',payload);
         }
     },
     plugins: [createPersistedState()]
