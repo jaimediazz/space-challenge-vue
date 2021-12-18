@@ -18,7 +18,8 @@ export const store = new VueX.Store({
         selectedTechnology: 0,
         isActive: 'home',
         isActiveDestination: 'moon',
-        isActiveCrew: 'commander'
+        isActiveCrew: 'commander',
+        isActiveTechnology: 'vehicle'
     },
     mutations: {
         changeSelectedTab: (state,payload) => {
@@ -84,6 +85,7 @@ export const store = new VueX.Store({
                     state.selectedTechnology = 2;
                     break;
             }
+            state.isActiveTechnology = payload;
         }        
     },
     actions: {
