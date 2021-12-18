@@ -17,7 +17,7 @@
       <div class="col d-flex justify-content-end">
         <router-link to="/destination"  @click.native="changeSelectedTab('destination')">
           <div 
-            class="d-flex justify-content-center align-items-center rounded-circle bg-light align-middle" 
+            class="d-flex justify-content-center align-items-center rounded-circle bg-light" 
             style="width: 250px; height: 250px; color: #000; font-family: Bellefair; font-size: 28px;">EXPLORE</div>
         </router-link>
       </div>
