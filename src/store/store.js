@@ -16,7 +16,8 @@ export const store = new VueX.Store({
         selectedDestination: 0,
         selectedMember: 0,
         selectedTechnology: 0,
-        isActive: 'home'
+        isActive: 'home',
+        isActiveDestination: 'moon'
     },
     mutations: {
         changeSelectedTab: (state,payload) => {
@@ -51,6 +52,7 @@ export const store = new VueX.Store({
                     state.selectedDestination = 3;
                     break;
             }
+            state.isActiveDestination = payload;
         },
         changeSelectedMember: (state,payload) => {
             switch (payload) {
