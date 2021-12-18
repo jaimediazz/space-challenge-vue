@@ -15,7 +15,8 @@ export const store = new VueX.Store({
         ],
         selectedDestination: 0,
         selectedMember: 0,
-        selectedTechnology: 0
+        selectedTechnology: 0,
+        isActive: 'home'
     },
     mutations: {
         changeSelectedTab: (state,payload) => {
@@ -32,7 +33,8 @@ export const store = new VueX.Store({
                 case 'technology':
                   state.backgroundImg ='../assets/technology/background-technology-desktop.jpg';
                   break;
-            }            
+            }
+            state.isActive = payload;            
         },
         changeSelectedDestination: (state,payload) => {
             switch (payload) {
