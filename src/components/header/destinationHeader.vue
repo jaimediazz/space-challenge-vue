@@ -1,16 +1,16 @@
 <template>
     <ul class="nav" id="nav-bar">
       <li class="nav-item" :class="{active: isActiveDestination == 'moon'}">
-        <a href="#" @click="changeSelectedDestination('moon')">MOON</a>
+        <a @click="changeSelectedDestination('moon')">MOON</a>
       </li>
       <li class="nav-item" :class="{active: isActiveDestination == 'mars'}">
-        <a href="#" @click="changeSelectedDestination('mars')">MARS</a>
+        <a @click="changeSelectedDestination('mars')">MARS</a>
       </li>
       <li class="nav-item" :class="{active: isActiveDestination == 'europa'}">
-        <a href="#" @click="changeSelectedDestination('europa')">EUROPA</a>
+        <a @click="changeSelectedDestination('europa')">EUROPA</a>
       </li>
       <li class="nav-item" :class="{active: isActiveDestination == 'titan'}">
-        <a href="#" @click="changeSelectedDestination('titan')">TITAN</a>
+        <a @click="changeSelectedDestination('titan')">TITAN</a>
       </li>
     </ul>
 </template>

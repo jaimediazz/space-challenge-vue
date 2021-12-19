@@ -4,17 +4,17 @@
       <div 
         class="d-flex justify-content-center mb-5 align-items-center border border-1 rounded-circle dimensiones"
         :class="{'active-circular': isActiveTechnology == 'vehicle'}">
-        <a href="#" @click="changeSelectedTechnology('vehicle')"> <h4>1</h4> </a>
+        <a @click="changeSelectedTechnology('vehicle')"> <h4>1</h4> </a>
       </div>
       <div 
         class="d-flex justify-content-center mb-5 align-items-center border border-1 rounded-circle dimensiones"
         :class="{'active-circular': isActiveTechnology == 'spaceport'}">
-        <a href="#" @click="changeSelectedTechnology('spaceport')"> <h4>2</h4> </a>
+        <a @click="changeSelectedTechnology('spaceport')"> <h4>2</h4> </a>
       </div>
       <div 
         class="d-flex justify-content-center align-items-center border border-1 rounded-circle dimensiones"
         :class="{'active-circular': isActiveTechnology == 'capsule'}">
-        <a href="#" @click="changeSelectedTechnology('capsule')"> <h4>3</h4> </a>
+        <a @click="changeSelectedTechnology('capsule')"> <h4>3</h4> </a>
       </div>
     </div>
   </div>    

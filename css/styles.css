@@ -112,3 +112,8 @@ div h4 a {
 .non-active {
     background-color: #D0D6F9;
 }
+
+a:not([href]) {
+    cursor: pointer;
+    color: #fff;
+}
